@@ -1,0 +1,46 @@
+<nav class="navbar navbar-default navbar-inverse">
+    <div class="container-fluid">
+      <!-- Logo on the left -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" (click)="collapsed = !collapsed">
+          <span class="icon-bar" *ngFor="let iconBar of [1, 2, 3]"></span>
+        </button>
+        <a routerLink="/" class="navbar-brand" style="cursor: pointer;">Recipe Book</a>
+      </div>
+      <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true">
+      <!-- <div class="collapse navbar-collapse"> -->
+        <div class="navbar-right">
+        <ul class="nav navbar-nav">
+            <li routerLinkActive="active"><a routerLink="/recipes">Recipes</a></li>
+            <li routerLinkActive="active"><a routerLink="/shopping-list">Shopping List</a></li>
+            <li><a >About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li appDropdown>
+              <a style="cursor: pointer;" class="dropdown-toggle" role="button">Manage <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a style="cursor: pointer;">Save Data</a></li>
+                  <li><a style="cursor: pointer;">Fetch Data</a></li>
+                </ul>
+            </li>
+        </ul>
+      </div>
+      </div>
+      <!-- Navigation sections on the right
+      <div class="navbar-right">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" role="button">Manage <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Save Data</a></li>
+                <li><a href="#">Fetch Data</a></li>
+              </ul>
+          </li>
+        </ul>
+      </div> -->
+    </div><!-- /.container-fluid -->
+  </nav>
